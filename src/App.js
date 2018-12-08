@@ -6,7 +6,7 @@ import theme from './theme';
 const Section = ({ title, children }) => (
   <Flex p={[3, 4, 5]} bg="snow" color="#ea3214" justifyContent="center">
     <Box>
-      <Heading textAlign="center" p={2}>
+      <Heading textAlign="center" p={2} fontWeight={400}>
         {title}
       </Heading>
       <Text fontSize={[1, 2, 3]} color="#383a34">
@@ -24,7 +24,9 @@ class App extends Component {
           <div style={{ maxWidth: '960px', margin: '0 auto' }}>
             <Flex p={5} color="#ea3214" flexWrap="wrap">
               <Box width={[1, 1 / 2, 1 / 2]} css={{ minHeight: '80vh' }}>
-                <Text fontSize={[4, 5, 6]}>nodal network</Text>
+                <Heading fontSize={[5, 6]} fontWeight="bold">
+                  nodal.network
+                </Heading>
                 <Text fontSize={2}>digital tools for local engagement</Text>
               </Box>
               <Box width={[1, 1 / 2, 1 / 2]} py={3} color="#ea3214">
