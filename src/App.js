@@ -53,11 +53,12 @@ class App extends Component {
                 </Text>
               </Box>
               <Box width={[1, 1 / 2, 1 / 2]} color="#383a34">
-                <Text lineHeight={1.5} fontSize={[3, 4]}>
+                <Text lineHeight={1.5} fontSize={[2, 3]}>
                   <p>
-                    Nodal is a <ColorSpan>web app</ColorSpan> with a set of{' '}
-                    <ColorSpan>handy features</ColorSpan> needed to operate a
-                    shared set of resources: like{' '}
+                    Nodal is a <ColorSpan>web software</ColorSpan> with a set of{' '}
+                    <ColorSpan>handy features</ColorSpan> like{' '}
+                    <ColorSpan>calendar</ColorSpan>, needed to operate a shared
+                    set of resources: like{' '}
                     <ColorSpan>rooms, machines, studios, stages</ColorSpan> etc.
                   </p>
                   <p>
@@ -65,8 +66,9 @@ class App extends Component {
                     <ColorSpan>
                       artists, culture-creators, technicians or participants
                     </ColorSpan>{' '}
-                    to facilitate <ColorSpan>activities</ColorSpan>, who value
-                    getting
+                    to facilitate
+                    <ColorSpan> public or private activities</ColorSpan>, who
+                    value getting
                     <ColorSpan> together</ColorSpan>.
                   </p>
                 </Text>
