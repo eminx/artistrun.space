@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Bree Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  font-family: 'Sarabun', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
     'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -14,7 +14,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Bree Serif', sans-serif;
+  font-family: 'Carter One', cursive;
 }
 
 code {
@@ -22,4 +22,8 @@ code {
     monospace;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Bree+Serif');
+.content__titleDescription .content__fixedBadge {
+  display: none !important;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Cabin|Carter+One|Sarabun:500');

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Flex, Box, Text, Heading, Link } from 'rebass';
+import { Flex, Box, Text, Heading } from 'rebass';
 import theme from './theme';
-import sections from './sections';
+import { sections } from './text';
 
 const bgStyle = {
   padding: 12,
-  height: 240,
+  height: 320,
   backgroundSize: 'cover',
   borderRadius: 0
 };
@@ -15,33 +15,39 @@ const mainColor = (alpha = 0.9) => `rgba(234, 50, 20, ${alpha})`;
 
 const textGrey = (alpha = 0.8) => `rgba(0,0,0, ${alpha})`;
 
-const Section = ({ title, imageUrl, children }) => (
+const Section = ({ title, imageUrl, children, order }) => (
   <Flex
     p={[3, 4, 5]}
-    bg="snow"
     color={textGrey(0.7)}
     style={{ borderBottom: `1px solid ${mainColor(0.2)}` }}
   >
     <Box width={1}>
-      <Heading p={12} fontSize={[3, 4]} color={textGrey(0.7)}>
+      <Heading p={12} fontSize={[4, 5]} color={textGrey(0.7)}>
         {title}
       </Heading>
-      <Flex flexDirection="row-reverse" flexWrap="wrap">
-        {imageUrl && (
-          <Box
-            style={{
-              ...bgStyle,
-              border: `1px solid ${mainColor(1)}`,
-              backgroundImage: `url('${imageUrl}')`
-            }}
-            width={[1, 2 / 5]}
-          />
-        )}
-        <Box width={[1, 3 / 5]}>
+      <Flex
+        flexDirection={order % 2 === 0 ? 'row' : 'row-reverse'}
+        flexWrap="wrap"
+      >
+        <Box p={[12, 24]} width={[1, 1 / 2]}>
+          {imageUrl && (
+            <Box
+              style={{
+                ...bgStyle,
+                border: `1px solid ${mainColor(1)}`,
+                backgroundImage: `url('${imageUrl}')`
+              }}
+              // p={[12, 24]}
+              // width={[1, 2 / 5]}
+            />
+          )}
+        </Box>
+        <Box width={[1, 1 / 2]}>
           <Text
-            fontSize={[2, 3]}
+            fontSize={['16px', '20px']}
             color={textGrey()}
-            p={12}
+            p={[12, 24]}
+            lineHeight={1.5}
             dangerouslySetInnerHTML={{ __html: children }}
           />
         </Box>
@@ -57,15 +63,10 @@ const ColorSpan = props => (
 class App extends Component {
   render() {
     return (
-      <div
-        className="App"
-        style={{
-          backgroundColor: '#fff0f0'
-        }}
-      >
+      <div className="App">
         <ThemeProvider theme={theme}>
           <div
-            style={{ maxWidth: '960px', margin: '0 auto', paddingBottom: 200 }}
+            style={{ maxWidth: '1280px', margin: '0 auto', paddingBottom: 200 }}
           >
             <Flex p={[3, 4, 5]} flexWrap="wrap">
               <Box width={[1, 1 / 2, 1 / 2]}>
@@ -79,34 +80,44 @@ class App extends Component {
                 <Text fontSize={[2, 3]} lineHeight={1.1}>
                   digital tools for local engagement
                 </Text>
+                {/* <Box>
+                  <iframe
+                    frameborder="0"
+                    scrolling="no"
+                    marginheight="0"
+                    marginwidth="0"
+                    src="https://app.mailjet.com/widget/iframe/3AD8/at1"
+                    width="100%"
+                    height="345"
+                  />
+                </Box> */}
               </Box>
-              <Box width={[1, 1 / 2, 1 / 2]} color={textGrey}>
+              <Box width={[1, 1 / 2, 1 / 2]}>
                 <Text lineHeight={1.5} fontSize={[2, 3]}>
                   <p>
-                    Nodal is a <ColorSpan>web software</ColorSpan> with a set of{' '}
-                    <ColorSpan>handy features</ColorSpan> like{' '}
-                    <ColorSpan>calendar</ColorSpan>, used to cooperate a shared
-                    set of resources: like{' '}
-                    <ColorSpan>rooms, machines, studios, stages</ColorSpan> etc.
+                    Nodal is a web-based toolbox with a set of handy features
+                    like <ColorSpan>calendar</ColorSpan>, used to cooperate a{' '}
+                    <ColorSpan>shared set of resources</ColorSpan> like rooms,
+                    machines, studios, stages etc.
                   </p>
                   <p>
-                    It's typically used by a group of individuals like:{' '}
-                    <ColorSpan>
-                      artists, culture-creators, technicians or participants
-                    </ColorSpan>{' '}
-                    to facilitate
-                    <ColorSpan> public or private activities</ColorSpan>, who
-                    value getting
+                    It's typically used to facilitate
+                    <ColorSpan> public or private activities</ColorSpan>{' '}
+                    cooperated by a group of individuals like: artists,
+                    crafts-persons, culture-creators, technicians or
+                    participants, who value getting
                     <ColorSpan> together</ColorSpan>.
                   </p>
                 </Text>
               </Box>
             </Flex>
-            <div style={{ border: `1px solid ${mainColor()}` }}>
-              {sections.map(section => (
+            <div>
+              {sections.map((section, index) => (
                 <Section
+                  key={section.title}
                   title={section.title}
                   imageUrl={section.imageUrl || null}
+                  order={index}
                 >
                   {section.description}
                 </Section>
