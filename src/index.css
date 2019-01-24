@@ -22,6 +22,10 @@ code {
     monospace;
 }
 
+a {
+  color: #07c;
+}
+
 .content__titleDescription .content__fixedBadge {
   display: none !important;
 }

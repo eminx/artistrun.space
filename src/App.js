@@ -22,7 +22,12 @@ const Section = ({ title, imageUrl, children, order }) => (
     style={{ borderBottom: `1px solid ${mainColor(0.2)}` }}
   >
     <Box width={1}>
-      <Heading p={12} fontSize={[4, 5]} color={textGrey(0.7)}>
+      <Heading
+        p={12}
+        fontSize={[4, 5]}
+        color={textGrey(0.7)}
+        textAlign="center"
+      >
         {title}
       </Heading>
       <Flex
@@ -37,12 +42,10 @@ const Section = ({ title, imageUrl, children, order }) => (
                 border: `1px solid ${mainColor(1)}`,
                 backgroundImage: `url('${imageUrl}')`
               }}
-              // p={[12, 24]}
-              // width={[1, 2 / 5]}
             />
           )}
         </Box>
-        <Box width={[1, 1 / 2]}>
+        <Box width={imageUrl ? [1, 1 / 2] : 1}>
           <Text
             fontSize={['16px', '20px']}
             color={textGrey()}
