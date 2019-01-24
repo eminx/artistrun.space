@@ -69,17 +69,21 @@ class App extends Component {
             style={{ maxWidth: '1280px', margin: '0 auto', paddingBottom: 200 }}
           >
             <Flex p={[3, 4, 5]} flexWrap="wrap">
-              <Box width={[1, 1 / 2, 1 / 2]}>
+              <Box
+                width={[1]}
+                style={{ borderBottom: `1px solid ${mainColor()}` }}
+              >
+                <Text fontSize={[3, 4]} lineHeight={1.1} textAlign="center">
+                  Collectively manage your
+                </Text>
                 <Heading
                   fontSize={[5, 6]}
                   fontWeight="bold"
                   color={mainColor()}
+                  textAlign="center"
                 >
-                  nodal network
+                  Artistrun Space
                 </Heading>
-                <Text fontSize={[2, 3]} lineHeight={1.1}>
-                  digital tools for local engagement
-                </Text>
                 {/* <Box>
                   <iframe
                     frameborder="0"
@@ -92,22 +96,21 @@ class App extends Component {
                   />
                 </Box> */}
               </Box>
-              <Box width={[1, 1 / 2, 1 / 2]}>
-                <Text lineHeight={1.5} fontSize={[2, 3]}>
-                  <p>
-                    Nodal is a web-based toolbox with a set of handy features
-                    like <ColorSpan>calendar</ColorSpan>, used to cooperate a{' '}
-                    <ColorSpan>shared set of resources</ColorSpan> like rooms,
-                    machines, studios, stages etc.
-                  </p>
-                  <p>
-                    It's typically used to facilitate
-                    <ColorSpan> public or private activities</ColorSpan>{' '}
-                    cooperated by a group of individuals like: artists,
-                    crafts-persons, culture-creators, technicians or
-                    participants, who value getting
-                    <ColorSpan> together</ColorSpan>.
-                  </p>
+              <Box width={[1]} px={[20, 100, 200]} pt={[20, 30, 50]}>
+                <Text
+                  textAlign="center"
+                  fontSize={[3, 4]}
+                  pb={50}
+                  lineHeight={1.5}
+                >
+                  We found ways to run public and private activities much
+                  easier. <br /> Yet fun. <br />
+                </Text>
+
+                <Text textAlign="center" fontSize={[3, 4]}>
+                  <span style={{ borderBottom: `1px solid ${mainColor()}` }}>
+                    Built for artists, by artists.
+                  </span>
                 </Text>
               </Box>
             </Flex>

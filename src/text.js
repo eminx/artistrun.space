@@ -1,5 +1,5 @@
 const intro = `<p>
-Nodal is a <ColorSpan>web software</ColorSpan> with a set of{' '}
+Artistrun.Space is a <ColorSpan>web software</ColorSpan> with a set of{' '}
 <ColorSpan>handy features</ColorSpan> like{' '}
 <ColorSpan>calendar</ColorSpan>, used to cooperate a shared
 set of resources: like{' '}
@@ -38,7 +38,7 @@ const sections = [
     private project, as well as see who have already booked it in
     your own community. </p>
     <p>
-    With nodal, you can see in the calendar for all of those shared
+    With Artistrun.Space, you can see in the calendar for all of those shared
     resources and reclaim the empty spots.</p>`
   },
   {
@@ -67,14 +67,14 @@ const sections = [
     imageUrl:
       'https://images.unsplash.com/photo-1457694587812-e8bf29a43845?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80',
     description: `<p>For all the documents specific to instances (study groups,
-      public activities etc.), Nodal enables a common storage and easy
+      public activities etc.), Artistrun.Space enables a common storage and easy
       access with upload/download features.</p>`
   },
   {
     title: 'Memberships',
     imageUrl:
       'https://s3.eu-central-1.amazonaws.com/skogen-reading-materials/landing-page/nodal-members.jpg',
-    description: `<p>With Nodal, you can manage the memberships within your
+    description: `<p>With Artistrun.Space, you can manage the memberships within your
     organisation, either it is based on paid memberships, or just
     pure love.</p>`
   },
@@ -92,7 +92,7 @@ const sections = [
     title: 'Portfolio pages (soon!)',
     imageUrl:
       'https://images.unsplash.com/photo-1459908676235-d5f02a50184b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-    description: `<p>Since most users of Nodal are artists who have a need to display their work and basic info such as contact details, 
+    description: `<p>Since most users of Artistrun.Space are artists who have a need to display their work and basic info such as contact details, 
     we want to build it for you to make it easier to manage your online portfolio. Soon we're releasing our portfolio feature so that artists
     can display their works with ease.</p>`
   },
@@ -103,9 +103,9 @@ const sections = [
     to adopt this.
   </p>
   <p>
-    Meanwhile, if you want to use Nodal software please get in
+    Meanwhile, if you want to use Artistrun.Space software please get in
     touch with us: 
-    <a href="mailto:emin@infinitesimals.space?subject=We're interested in Nodal">
+    <a href="mailto:emin@infinitesimals.space?subject=We're interested in Artistrun.Space">
       Send an email
     </a>
   </p>`
