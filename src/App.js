@@ -96,13 +96,14 @@ class App extends Component {
               <Box width={[1, 1 / 2]} px={[12, 24, 48]} pt={[20, 30, 50]}>
                 <Text textAlign="center" fontSize={[3, 4]} lineHeight={1.5}>
                   <p>
-                    We found ways to run public and private activities much
-                    easier.
+                    We've figured out some ways to manage public and private
+                    activities much better.
                   </p>
                   <p>Yet fun.</p>
                   <p>
                     <span style={{ borderBottom: `1px solid ${mainColor()}` }}>
-                      Built by artists, for artists.
+                      Built by artists, for artists, for collaboration and
+                      cooperation.
                     </span>
                   </p>
                 </Text>
