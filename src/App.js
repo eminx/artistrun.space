@@ -71,12 +71,17 @@ class App extends Component {
           <div
             style={{ maxWidth: '1280px', margin: '0 auto', paddingBottom: 200 }}
           >
-            <Flex p={[3, 4, 5]} flexWrap="wrap">
+            <Flex flexWrap="wrap">
               <Box
                 width={[1]}
                 style={{ borderBottom: `1px solid ${mainColor()}` }}
               >
-                <Text fontSize={[3, 4]} lineHeight={1.1} textAlign="center">
+                <Text
+                  fontSize={[3, 4]}
+                  lineHeight={1.1}
+                  textAlign="center"
+                  pt={20}
+                >
                   Collectively manage your
                 </Text>
                 <Heading
@@ -87,33 +92,42 @@ class App extends Component {
                 >
                   Artistrun Space
                 </Heading>
-                {/* <Box>
-                  <iframe
-                    frameborder="0"
-                    scrolling="no"
-                    marginheight="0"
-                    marginwidth="0"
-                    src="https://app.mailjet.com/widget/iframe/3AD8/at1"
-                    width="100%"
-                    height="345"
-                  />
-                </Box> */}
               </Box>
-              <Box width={[1]} px={[20, 100, 200]} pt={[20, 30, 50]}>
-                <Text
-                  textAlign="center"
-                  fontSize={[3, 4]}
-                  pb={50}
-                  lineHeight={1.5}
-                >
-                  We found ways to run public and private activities much
-                  easier. <br /> Yet fun. <br />
+              <Box width={[1, 1 / 2]} px={[12, 24, 48]} pt={[20, 30, 50]}>
+                <Text textAlign="center" fontSize={[3, 4]} lineHeight={1.5}>
+                  <p>
+                    We found ways to run public and private activities much
+                    easier.
+                  </p>
+                  <p>Yet fun.</p>
+                  <p>
+                    <span style={{ borderBottom: `1px solid ${mainColor()}` }}>
+                      Built by artists, for artists.
+                    </span>
+                  </p>
                 </Text>
+              </Box>
 
-                <Text textAlign="center" fontSize={[3, 4]}>
-                  <span style={{ borderBottom: `1px solid ${mainColor()}` }}>
-                    Built for artists, by artists.
-                  </span>
+              <Box width={[1, 1 / 2]} p={[12, 24, 48]}>
+                <Text lineHeight={1.5} fontSize={[3, 4]}>
+                  <p>
+                    <span style={{ backgroundColor: mainColor(0.1) }}>
+                      Nodal is a web-based toolbox with a set of handy features
+                      like <ColorSpan>calendar</ColorSpan>, used to cooperate a{' '}
+                      <ColorSpan>shared set of resources</ColorSpan> like rooms,
+                      machines, studios, stages etc.
+                    </span>
+                  </p>
+                  <p>
+                    <span style={{ backgroundColor: mainColor(0.1) }}>
+                      It's typically used to facilitate
+                      <ColorSpan> public or private activities</ColorSpan>{' '}
+                      cooperated by a group of individuals like: artists,
+                      crafts-persons, culture-creators, technicians or
+                      participants, who value getting
+                      <ColorSpan> together</ColorSpan>.
+                    </span>
+                  </p>
                 </Text>
               </Box>
             </Flex>
