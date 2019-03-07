@@ -102,8 +102,9 @@ class App extends Component {
                   <p>Yet fun.</p>
                   <p>
                     <span style={{ borderBottom: `1px solid ${mainColor()}` }}>
-                      Built by artists, for artists, for collaboration and
-                      cooperation.
+                      Built by artists, for artists,
+                      <br />
+                      for collaboration and cooperation.
                     </span>
                   </p>
                 </Text>
@@ -113,8 +114,8 @@ class App extends Component {
                 <Text lineHeight={1.5} fontSize={[3, 4]}>
                   <p>
                     <span style={{ backgroundColor: mainColor(0.1) }}>
-                      Nodal is a web-based toolbox with a set of handy features
-                      like <ColorSpan>calendar</ColorSpan>, used to cooperate a{' '}
+                      This is a web-based toolbox with a set of handy features
+                      like <ColorSpan>calendar</ColorSpan>, used to manage a{' '}
                       <ColorSpan>shared set of resources</ColorSpan> like rooms,
                       machines, studios, stages etc.
                     </span>
