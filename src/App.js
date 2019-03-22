@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Flex, Box, Text, Heading } from 'rebass';
+import { Flex, Box, Text, Heading, Link } from 'rebass';
 import theme from './theme';
 import { sections } from './text';
 
@@ -31,7 +31,7 @@ const Section = ({ title, imageUrl, children, order }) => (
         {title}
       </Heading>
       <Flex
-        flexDirection={order % 2 === 0 ? 'row' : 'row-reverse'}
+        // flexDirection={order % 2 === 0 ? 'row' : 'row-reverse'}
         flexWrap="wrap"
       >
         <Box p={[12, 24]} width={[1, 1 / 2]}>
@@ -82,10 +82,10 @@ class App extends Component {
                   textAlign="center"
                   pt={20}
                 >
-                  Collectively manage your
+                  Software for your
                 </Text>
                 <Heading
-                  fontSize={[5, 6]}
+                  fontSize={[4, 5]}
                   fontWeight="bold"
                   color={mainColor()}
                   textAlign="center"
@@ -93,45 +93,70 @@ class App extends Component {
                   Artistrun Space
                 </Heading>
               </Box>
-              <Box width={[1, 1 / 2]} px={[12, 24, 48]} pt={[20, 30, 50]}>
-                <Text textAlign="center" fontSize={[3, 4]} lineHeight={1.5}>
-                  <p>
-                    We've figured out some ways to manage public and private
-                    activities much better.
-                  </p>
-                  <p>Yet fun.</p>
-                  <p>
-                    <span style={{ borderBottom: `1px solid ${mainColor()}` }}>
-                      Built by artists, for artists,
-                      <br />
-                      for collaboration and cooperation.
-                    </span>
-                  </p>
-                </Text>
-              </Box>
+              <Flex mb={96} flexWrap="wrap">
+                <Box width={[1, 1 / 2]} p={[12, 24, 48]}>
+                  <Text lineHeight={1.5} fontSize={[3, 4]}>
+                    <p>
+                      <span style={{ backgroundColor: mainColor(0.1) }}>
+                        This is a web-based toolbox with a set of handy features
+                        like <ColorSpan>calendar</ColorSpan>, used to manage{' '}
+                        <ColorSpan>shared resources </ColorSpan>
+                        like tools and spaces. Besides it provides specially
+                        crafted tools for starting and running{' '}
+                        <ColorSpan>study groups</ColorSpan> with dedicated chat
+                        feature, as well as <ColorSpan>public events</ColorSpan>
+                        .
+                      </span>
+                    </p>
+                  </Text>
+                </Box>
 
-              <Box width={[1, 1 / 2]} p={[12, 24, 48]}>
-                <Text lineHeight={1.5} fontSize={[3, 4]}>
-                  <p>
-                    <span style={{ backgroundColor: mainColor(0.1) }}>
-                      This is a web-based toolbox with a set of handy features
-                      like <ColorSpan>calendar</ColorSpan>, used to manage a{' '}
-                      <ColorSpan>shared set of resources</ColorSpan> like rooms,
-                      machines, studios, stages etc.
-                    </span>
-                  </p>
-                  <p>
-                    <span style={{ backgroundColor: mainColor(0.1) }}>
-                      It's typically used to facilitate
-                      <ColorSpan> public or private activities</ColorSpan>{' '}
-                      cooperated by a group of individuals like: artists,
-                      crafts-persons, culture-creators, technicians or
-                      participants, who value getting
-                      <ColorSpan> together</ColorSpan>.
-                    </span>
-                  </p>
-                </Text>
-              </Box>
+                <Box width={[1, 1 / 2]} px={[12, 24, 48]} pt={[20, 30, 50]}>
+                  <Text textAlign="center" fontSize={[2, 3]} lineHeight={1.5}>
+                    <p>
+                      By providing this, we aim at helping artists spend time
+                      less on social media or other commercial tools, and more
+                      on getting <ColorSpan> together</ColorSpan>.
+                    </p>
+                    <p>
+                      <span
+                        style={{ borderBottom: `1px solid ${mainColor()}` }}
+                      >
+                        Built by artists, for artists,
+                        <br />
+                        for collaboration and cooperation.
+                      </span>
+                    </p>
+                  </Text>
+                </Box>
+              </Flex>
+
+              <Flex justifyContent="center">
+                <Box
+                  width={[1, 1 / 2]}
+                  p={[12, 24, 48]}
+                  bg="#272727"
+                  color="#fefefe"
+                  mb={96}
+                >
+                  <Text lineHeight={1.5} fontSize={[4, 5]} textAlign="center">
+                    THIS IS NOT A STARTUP
+                  </Text>
+                  <Text lineHeight={1.5} fontSize={[2, 3]} textAlign="center">
+                    <p>
+                      This soon-to-be platform software is built with no mere
+                      intentions of gaining profit for no shareholder or
+                      invester who own or operate it in anyway.
+                    </p>
+                    <p>
+                      It is made with a lot of love for arts and a passion to
+                      liberate artistic practices, with values inspired of{' '}
+                      <Link href="http://laborislove.se">Labor is Love.</Link>.
+                    </p>
+                  </Text>
+                  <p />
+                </Box>
+              </Flex>
             </Flex>
             <div>
               {sections.map((section, index) => (
