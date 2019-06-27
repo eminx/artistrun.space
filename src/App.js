@@ -8,7 +8,7 @@ const bgStyle = {
   padding: 12,
   height: 320,
   backgroundSize: 'cover',
-  borderRadius: 0
+  borderRadius: 0,
 };
 
 const mainColor = (alpha = 0.9) => `rgba(234, 50, 20, ${alpha})`;
@@ -40,7 +40,7 @@ const Section = ({ title, imageUrl, children, order }) => (
               style={{
                 ...bgStyle,
                 border: `1px solid ${mainColor(1)}`,
-                backgroundImage: `url('${imageUrl}')`
+                backgroundImage: `url('${imageUrl}')`,
               }}
             />
           )}
@@ -103,9 +103,8 @@ class App extends Component {
                         <ColorSpan>shared resources </ColorSpan>
                         like tools and spaces. Besides it provides specially
                         crafted tools for starting and running{' '}
-                        <ColorSpan>study groups</ColorSpan> with dedicated chat
-                        feature, as well as <ColorSpan>public events</ColorSpan>
-                        .
+                        <ColorSpan>study groups</ColorSpan>, as well as{' '}
+                        <ColorSpan>public events</ColorSpan>.
                       </span>
                     </p>
                   </Text>
@@ -116,7 +115,8 @@ class App extends Component {
                     <p>
                       By providing this, we aim at helping artists spend time
                       less on social media or other commercial tools, and more
-                      on getting <ColorSpan> together</ColorSpan>.
+                      on their practices and getting{' '}
+                      <ColorSpan> together</ColorSpan>.
                     </p>
                     <p>
                       <span
@@ -131,30 +131,9 @@ class App extends Component {
                 </Box>
               </Flex>
 
-              <Flex justifyContent="center">
-                <Box
-                  width={[1, 1 / 2]}
-                  p={[12, 24, 48]}
-                  bg="#272727"
-                  color="#fefefe"
-                  mb={96}
-                >
-                  <Text lineHeight={1.5} fontSize={[4, 5]} textAlign="center">
-                    THIS IS NOT A STARTUP
-                  </Text>
-                  <Text lineHeight={1.5} fontSize={[2, 3]} textAlign="center">
-                    <p>
-                      This soon-to-be platform software is built with no mere
-                      intentions of gaining profit for no shareholder or
-                      invester who own or operate it in anyway.
-                    </p>
-                    <p>
-                      It is made with a lot of love for arts and a passion to
-                      liberate artistic practices, with values inspired of{' '}
-                      <Link href="http://laborislove.se">Labor is Love.</Link>.
-                    </p>
-                  </Text>
-                  <p />
+              <Flex justifyContent="center" textAlign="center" width="100%">
+                <Box p={[12, 24, 48]}>
+                  <Heading fontSize={[3, 4]}>Here are the features</Heading>
                 </Box>
               </Flex>
             </Flex>
